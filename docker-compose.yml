@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: work-distributor-app
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./tasks.db:/app/tasks.db
+      - ./static/uploads:/app/static/uploads
+      - ./static/completed:/app/static/completed
