@@ -1,14 +1,21 @@
+<p align="center">
+  <img src="https://img.shields.io/badge/Language-Go-blue?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Real--Time-WebSocket-success?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Deployment-Docker-orange?style=flat-square"/>
+</p>
 
-# Work Distributor System
+<h1 align="center">Work Distributor System</h1>
 
-**Submitted by:** Zakir Hussain
-**Course:** Distributed Programming for Web, IoT and Mobile Systems  
-**Instructor:** Prof. Galletta Letterio  
-**Submitted on:** May 20, 2025
+<p align="center">
+  <strong>Submitted by:</strong> Zakir Hussain<br/>
+  <strong>Course:</strong> Distributed Programming for Web, IoT and Mobile Systems<br/>
+  <strong>Instructor:</strong> Prof. Galletta Letterio<br/>
+  <strong>Submitted on:</strong> May 20, 2025
+</p>
 
 ---
 
-##  Introduction
+## 📘 Introduction
 
 This project, titled **Work Distributor System**, presents a real-time web application built using **Go (Golang)**. It enables dynamic assignment and tracking of tasks between clients and workers, simulating a task management workflow typically seen in software companies.
 
@@ -16,7 +23,7 @@ Key technologies include **WebSockets**, **Go routines**, and **Docker**, ensuri
 
 ---
 
-##  Problem Statement
+## 🧩 Problem Statement
 
 Traditional task systems often suffer from static task distribution and poor user feedback. This project addresses those issues with:
 - Real-time updates via WebSockets
@@ -25,13 +32,13 @@ Traditional task systems often suffer from static task distribution and poor use
 
 ---
 
-##  System Overview
+## 🗂️ System Overview
 
-### Users:
+### 👥 Users
 - **Clients**: Submit tasks and receive real-time status updates
 - **Workers**: Get tasks assigned, complete them, and upload results
 
-### Key Features:
+### 🔑 Key Features
 - WebSocket-based real-time updates
 - Secure session-based login
 - Intelligent task distribution logic
@@ -39,19 +46,19 @@ Traditional task systems often suffer from static task distribution and poor use
 
 ---
 
-## System Architecture
-
-![System Flow](System Architecture.png)
+## 🧭 System Architecture
 
 <p align="center">
-  <img src="assets/flowchart.png" alt="System Flowchart" width="500"/>
+  <img src="assets/System_Architecture.png" alt="System Architecture" width="600"/>
   <br/>
   <i>Figure: Real-Time Task Distribution Flow</i>
 </p>
 
-##  Implementation Details
+---
 
-###  Technology Stack
+## 🔧 Implementation Details
+
+### 🧱 Technology Stack
 - **Backend**: Golang
 - **Database**: SQLite
 - **WebSocket**: Gorilla WebSocket
@@ -60,25 +67,25 @@ Traditional task systems often suffer from static task distribution and poor use
 - **Routing**: Gorilla Mux
 - **Containerization**: Docker, Docker Compose
 
-###  Backend Modules
+### 🧩 Backend Modules
 - `Coordinator`: HTTP routes, login, registration
 - `Distributor`: Goroutine assigning tasks based on load
 - `Middleware`: Auth and role validation
 - `Repository`: GORM-based DB operations
 - `Session`: Session & cookie handling
 
-###  Database Schema
+### 🗃️ Database Schema
 - `Users`: username, password, role (client/worker)
 - `Tasks`: ID, title, file paths, status, assignment info
 
-###  Real-Time Communication
+### 🔁 Real-Time Communication
 - WebSocket used for pushing messages when:
   - A task is assigned
   - A task is completed
 
 ---
 
-##  Security Features
+## 🔐 Security Features
 
 - Passwords hashed with bcrypt
 - Sessions secured using `.env` secret
@@ -86,7 +93,7 @@ Traditional task systems often suffer from static task distribution and poor use
 
 ---
 
-##  Task Distribution Logic
+## ⚙️ Task Distribution Logic
 
 - Periodically checks for unassigned tasks
 - Assigns to the worker with the fewest current tasks
@@ -94,23 +101,22 @@ Traditional task systems often suffer from static task distribution and poor use
 
 ---
 
-##  User Experience
+## 👤 User Experience
 
-### Clients:
+### 🧑‍💻 Clients:
 - Register/login
 - Submit task with file
 - View task status updates
 - Download completed tasks
 
-### Workers:
+### 🧑‍🔧 Workers:
 - Register/login
 - Receive tasks live (no refresh)
 - Upload completed work
 
 ---
 
-
-##  Dockerization
+## 🐳 Dockerization
 
 Docker + Docker Compose used for deployment.  
 - Base Image: `golang:1.23.2`
@@ -118,7 +124,7 @@ Docker + Docker Compose used for deployment.
 
 ---
 
-##  Results and Testing
+## ✅ Results and Testing
 
 Manual testing confirmed:
 - Task flow from submission to completion
@@ -126,17 +132,18 @@ Manual testing confirmed:
 - Session security and restricted access
 - Error handling and validations
 
-![System Flow](image-1.png)
-![System Flow](image-2.png)
-![System Flow](image-3.png)
-![System Flow](image-4.png)
-![System Flow](image-5.png)
-![System Flow](image-6.png)
-![System Flow](image-7.png)
+<p align="center">
+  <img src="assets/image-1.png" width="300"/>
+  <img src="assets/image-2.png" width="300"/>
+  <img src="assets/image-3.png" width="300"/><br/>
+  <img src="assets/image-4.png" width="300"/>
+  <img src="assets/image-5.png" width="300"/>
+  <img src="assets/image-6.png" width="300"/>
+</p>
 
 ---
 
-##  Conclusion
+## 🧾 Conclusion
 
 This project demonstrates:
 - Real-time, secure task management using Go
@@ -145,7 +152,7 @@ This project demonstrates:
 
 ---
 
-##  Future Scope
+## 🌱 Future Scope
 
 - Email notifications
 - Task deadlines and alerts
@@ -153,7 +160,7 @@ This project demonstrates:
 
 ---
 
-##  References
+## 📚 References
 
 - [Golang WebSocket Tutorial](https://medium.com/wisemonks/implementing-websockets-in-golang-d3e8e219733b)
 - [Golang Tour](https://go.dev/tour/welcome/1)
