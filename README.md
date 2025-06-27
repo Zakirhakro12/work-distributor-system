@@ -49,7 +49,7 @@ Traditional task systems often suffer from static task distribution and poor use
 ## 🧭 System Architecture
 
 <p align="center">
-  <img src="assets/System_Architecture.png" alt="System Architecture" width="600"/>
+  <img src="System_Architecture.png" alt="System Architecture" width="600"/>
   <br/>
   <i>Figure: Real-Time Task Distribution Flow</i>
 </p>
